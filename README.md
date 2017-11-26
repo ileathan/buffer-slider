@@ -11,7 +11,7 @@ Slide buffer streams recursive copywithins, hopefully this is scalable, but it s
 bufferSlider = require('buffer-slider')
 bs = new bufferSlider(BUFFER_SIZE/Buffer, [["1..250"], [78,79,80,90], 54, 100]);
 
-bs.slide() // your patched buffer.
+bs.slide() // your patched buffer is returned, optionall stored in _final.
 
 // If performance is not an issue, but data preservasion is the buffer will be internally padded, otherwise you 
 // lose any potential matches at the end, by defualt performance is sub optimal and everything is logged.
