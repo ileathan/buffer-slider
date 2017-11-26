@@ -1,6 +1,6 @@
-function bufferSlide(size=199999, buffer=0, startByte=0, badBytes=[]) {
+function bufferSlide(size=199999, startByte=0, badBytes=[]) {
   this.startByte = startByte === 0 ? 0 : startByte | 0 || 48;
-  this._buffer = buffer || new Uint8ClampedArray(size);
+  this._buffer = Number(buffer) ? new Uint8ClampedArray(size) : buffer;
   this.setBad(badBytes)
   this._slides = 0;
 }
