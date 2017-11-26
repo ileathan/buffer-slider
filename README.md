@@ -9,7 +9,9 @@ Slide buffer streams recursive copywithins, hopefully this is scalable, but it s
 
 ```javascript
 bufferSlider = require('buffer-slider')
-bs = new bufferSlider(BUFFER_SIZE/Buffer, [["1..250"], [78,79,80,90], 54, 100]);
+bs = new bufferSlider(BUFFER_SIZE/Buffer, [[1, 250], [78,79,80,90], 54, 100]);
+// Here byte indexes 1-250, 78-90 and 54-100 are removed, there are lots of other configuration options
+// Like a callback, that I wont document because I havnt bug tested them extensivly.
 
 bs.slide() // your patched buffer is returned, optionall stored in _final.
 
