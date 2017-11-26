@@ -29,6 +29,6 @@ require('buffer-slider').setBad([["1..250"], [78,79,80,90], 54, 100]).slide()
        /* OR */
 
 BS = require('buffer-slider');
-BS.from(buffer).setBad(calculateBitcoinIndexes).slide();
+BS.from(buffer).setBad(calculateBitcoinIndexes).slide(n);
 
 ```
