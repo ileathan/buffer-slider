@@ -21,7 +21,7 @@ bs.slide() // your patched buffer is returned, optionall stored in _final.
 
 At the moment it is very suboptimal in terms of effeciency. Ill fix that soon.
 
-```
+```javascript
 require('buffer-slider').setBad([["1..250"], [78,79,80,90], 54, 100]).slide()
 
        /* OR */
