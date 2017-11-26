@@ -13,7 +13,7 @@ bs = new bufferSlider(BUFFER_SIZE/Buffer, [[1, 250], [78,79,80,90], 54, 100]);
 // Here byte indexes 1-250, 78-90 and 54-100 are removed, there are lots of other configuration options
 // Like a callback, that I wont document because I havnt bug tested them extensivly.
 
-bs.slide() // your patched buffer is returned, optionall stored in _final.
+bs.slide() // your patched buffer is returned, optionally stored in the _final property.
 
 // If performance is not an issue, but data preservasion is the buffer will be internally padded, otherwise you 
 // lose any potential matches at the end, by defualt performance is sub optimal and everything is logged.
