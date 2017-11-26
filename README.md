@@ -7,7 +7,7 @@ Slide buffer streams recursive copywithins, hopefully this is scalable, but it s
 
 # CODE
 
-```
+```javascript
 bufferSlider = require('buffer-slider')
 bs = new bufferSlider(BUFFER_SIZE/Buffer, [["1..250"], [78,79,80,90], 54, 100]);
 
