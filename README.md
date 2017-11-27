@@ -1,5 +1,5 @@
 # buffer-slider
-Slide buffer streams recursive copywithins, hopefully this is scalable, but it solved my needs.
+Slide buffer streams recursivly with copywithins, hopefully this is scalable, but it solved my needs.
 
 1.) You have a raw buffer that you want to leave otherwise intact.
 
