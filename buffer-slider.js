@@ -24,9 +24,11 @@ bufferSlide.prototype = {
     :
       this._buffer = val > 0xffff ? val > 0xffffffff ? new Uint32Array(val) : new Uint16Array(val) : new Uint8ClampedArray(val);
 
-    try { this._buffer = Buffer.from(val + "") }
-    catch(e) { "Error: Cannot create buffer from value." }
-    return this || null;
+    if(!this._buffer) {
+      try { this._buffer = Buffer.from(val + "") }
+      catch(e) { "Error: Cannot create buffer from value." }
+    }
+    return !!this._buffer;
   }
 };
 
@@ -117,14 +119,13 @@ bufferSlide.prototype.toString = function() {
 
 bufferSlide.prototype.toArray = function() {
   if(!this._final) this._final = this._buffer;
+ 
   var res = [];
   var buf = this._final || this._buffer;
   for(let i = 0, l = this._buffer.length; i < l; ++i) {
     res[i] = String.fromCharCode(buf[i])
   }
-
   return res
 }
-
 
 try { module.exports = bufferSlide } catch(e) { window.bufferSlide = bufferSlide }
